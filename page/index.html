@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link href="https://unpkg.com/nes.css@2.3.0/css/nes.min.css" rel="stylesheet" />
+    <style>
+      @font-face {
+        font-family: "DungGeunMo";
+        src: url("../fonts/DungGeunMo.eot"), url("../fonts/DungGeunMo.woff") format("woff"), url("../fonts/DungGeunMo.ttf") format("truetype");
+      }
+      body {
+        display: flex;
+        color: black;
+        font-family: "Press Start 2P", "DungGeunMo", sans-serif;
+        background-color: #;
+        justify-content: center;
+        align-items: center;
+      }
+      #error-modal {
+        display: none;
+        position: absolute;
+        top: 30%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        height: 20em;
+        width: 80em;
+        z-index: 1000;
+        background-color: white;
+      }
+      #system-modal {
+        display: none;
+        position: absolute;
+        top: 30%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        height: 20em;
+        width: 80em;
+        z-index: 1000;
+        background-color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="nes-container with-title is-centered" id="error-modal">
+      <p class="title">Warn!</p>
+      <p style="font-size: xx-large; margin-top: 2em" id="error"></p>
+      <button type="button" class="nes-btn is-error" style="width: 10em" id="error-close">확인</button>
+    </div>
+    <div class="nes-container with-title is-centered" id="system-modal">
+      <p class="title">Warn!</p>
+      <p style="font-size: xx-large; margin-top: 2em" id="message"></p>
+      <button type="button" class="nes-btn is-success" style="width: 10em" id="system-modal-close">확인</button>
+    </div>
+    <div class="is-centered" id="main"></div>
+    <script src="./script.js"></script>
+  </body>
+</html>
